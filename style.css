@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+}
+
+.navtop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Branding{
+    cursor: pointer;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.searchInput::placeholder{
+    color: lightgray;
+}
+
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 1px solid green;
+    cursor: pointer;
+}
+
+.navbottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItems{
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.slider{
+    background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+    overflow: hidden;
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+}
+
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderBg{
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    color: white;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.sliderPrice{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.buyButton{
+    position: absolute;
+    bottom: 43%;
+    right: 13%;
+    font-size: 30px;
+    padding: 5px;
+    font-weight: 800;
+    background-color: black;
+    color: white;
+}
+
+.buyButton:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgb(124, 115, 80);
+}
+
+
+.sliderItem:nth-child(1) .sliderPrice{
+    color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice{
+    color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderPrice{
+    color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice{
+    color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice{
+    color: rgb(124, 115, 80);
+}
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.featureImg{
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.product{
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 84%);
+}
+
+.productDetails{
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    width: 40%;
+    padding: 50px;
+}
+
+.productImg{
+    width: 650px;
+    height: 650px;
+}
+
+.productTitle{
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.productPrice{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.productDesc{
+    margin-bottom: 10px;
+    color: gray;
+    font-size: 20px;
+}
+
+.colors,.sizes{
+    display: flex;
+}
+
+.color{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.color:last-child{
+    background-color: darkblue;
+}
+
+.size{
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.productButton{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.productButton:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.gallery{
+    display: flex;
+    padding: 50px;
+}
+
+.galleryItems{
+    /* width: 33.333%; */
+    flex: 1;
+    padding: 50px;
+}
+
+.galleryImg{
+    width: 100%;
+}
+
+.newseason{
+    display: flex;
+}
+
+.nsItem{
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nsTitlesm{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.nsTitle{
+    margin-bottom: 20px;
+}
+
+.nsImg{
+    width: 100%;
+    height: 500px;
+}
+
+.nsButton{
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+}
+
+.footerleft{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.fmenuList{
+    list-style: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.fmenuTitle{
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.finput{
+    padding: 5px;
+}
+
+.fListItem{
+    margin-bottom: 10px;
+}
+
+.footerRight{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.fButton{
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.rightfootermenu{
+    margin-bottom: 10px;
+}
+
+.fIcons{
+    margin-bottom: 10px;
+}
+
+.fIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.copyright{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+@media screen and (max-width:480px){
+    nav{
+        padding: 20px;
+    }
+    .search{
+        display: none;
+    }
+    .navtop{
+        margin-bottom: 10px;
+    }
+    .menuItems{
+        margin: 10px;
+    }
+    .navbottom{
+        flex-wrap: wrap;
+    }
+    .sliderImg{
+        /* width: 350px;
+        height: 350px; */
+        width: 90%;
+    }
+    .sliderTitle{
+        display: none;
+    }
+    .sliderBg{
+        width: 100%;
+        height: 100%;
+    }
+    .sliderPrice{
+        top: unset;
+        bottom: 2%;
+        left: 2%;
+        background-color: lightgray;
+    }
+    .buyButton{
+        bottom: unset;
+        top: 5%;
+        font-size: 17px;
+        padding: 10px;
+        right: 5%;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .feature{
+        margin-bottom: 40px;
+    }
+    .product{
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productImg{
+        width: 200px;
+        height: 200px;
+    }
+    .productDetails{
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin-left: 10px;
+        top: 0;
+    }
+    .productPrice{
+        margin-bottom: 20px;
+    }
+    .productDesc{
+        margin-bottom: 30px;
+    }
+    .colors{
+        margin-bottom: 10px;
+    }
+    .productTitle{
+        font-size: 50px;
+    }
+    .gallery{
+        flex-direction: column;
+    }
+    .newseason{
+        flex-direction: column;
+    }
+    .nsItem:nth-child(2){
+        padding: 50px;
+    }
+    .nsTitlesm{
+        font-size: 20px;
+    }
+    .nsTitle{
+        font-size: 18px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerleft{
+        width: 90%;
+    }
+    .footerRight{
+        align-items: center;
+        width: 90%;
+    }
+    .footerRight{
+        background-color: whitesmoke;
+    }
+}
